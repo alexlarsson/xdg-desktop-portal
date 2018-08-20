@@ -1,7 +1,7 @@
 NULL =
 
 org.freedesktop.portal.Flatpak.xml :
-	cp $(datadir)/dbus-1/interfaces/org.freedesktop.portal.Flatpak.xml .
+	sed "s/-‍-/-/g" $(datadir)/dbus-1/interfaces/org.freedesktop.portal.Flatpak.xml > org.freedesktop.portal.Flatpak.xml
 
 portal_files = 								\
 	org.freedesktop.portal.Flatpak.xml		 		\
